@@ -23,8 +23,8 @@ public class Walking : State {
     public override void FixedUpdate() {
         base.FixedUpdate();
 
-        Vector3 walkVector = controller.movementVector * controller.speed;
-        walkVector = controller.GetFoward() * walkVector;
+        Vector3 walkVector = controller.CreateWalk(controller.movementVector);
+        controller.pastMovementVector = controller.movementVector;
         
         controller.thisRigidbody.AddForce(walkVector, ForceMode.Force);
 

@@ -1,8 +1,10 @@
 using UnityEngine;
 public class Idle: State {
     private PlayerController controller;
+    private bool fixedExecuted;
     public Idle(PlayerController controller) : base("Idle") {
         this.controller = controller;
+        fixedExecuted = false;
     }
 
     public override void Enter() {
@@ -15,6 +17,8 @@ public class Idle: State {
         base.Update();
         if(!controller.movementVector.IsZero()){
             controller.stateMachine.ChangeState(controller.walkingState);
+            controller.thisRigidbody.constraints = controller.originalConstraints;
+            fixedExecuted = false;
             return;
         }
     }
@@ -23,5 +27,11 @@ public class Idle: State {
     }
     public override void FixedUpdate() {
         base.FixedUpdate();
+        if(!fixedExecuted){
+            //Vector3 walkVector = controller.CreateWalk(-controller.pastMovementVector/5);
+            //controller.thisRigidbody.AddForce(walkVector, ForceMode.VelocityChange);
+            controller.thisRigidbody.constraints = RigidbodyConstraints.FreezePosition;
+            fixedExecuted = true;
+        }
     }
 }

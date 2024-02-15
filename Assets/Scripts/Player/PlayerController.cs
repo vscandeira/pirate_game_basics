@@ -9,11 +9,15 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public Idle idleState;
     [HideInInspector] public Walking walkingState;
     [HideInInspector] public Vector3 movementVector;
+    [HideInInspector] public Vector3 pastMovementVector;
     [HideInInspector] public Rigidbody thisRigidbody;
+    [HideInInspector] public RigidbodyConstraints originalConstraints;
     public float speed = 10f;
 
     void Awake() {
         thisRigidbody = GetComponent<Rigidbody>();
+        originalConstraints = thisRigidbody.constraints;
+        pastMovementVector = new Vector3(0,0,0);
     }
     void Start() {
         stateMachine = new StateMachine();
@@ -40,6 +44,12 @@ public class PlayerController : MonoBehaviour
     }
     void LateUpdate() {
         stateMachine.LateUpdate();
+    }
+
+    public Vector3 CreateWalk(Vector3 movVector) {
+        Vector3 ret = movVector * speed;
+        ret = GetFoward() * ret;
+        return ret;
     }
 
     public Quaternion GetFoward() {
