@@ -7,14 +7,18 @@ public class Idle: State {
 
     public override void Enter() {
         base.Enter();
-        Debug.Log("Idle in.");
+        Debug.Log("Idle enter.");
     }
     public override void Exit() {
         base.Exit();
-        Debug.Log("Idle out.");
+        Debug.Log("Idle exit.");
     }
     public override void Update() {
         base.Update();
+        if(!controller.movementVector.IsZero()){
+            controller.stateMachine.ChangeState(controller.walkingState);
+            return;
+        }
     }
     public override void LateUpdate() {
         base.LateUpdate();
