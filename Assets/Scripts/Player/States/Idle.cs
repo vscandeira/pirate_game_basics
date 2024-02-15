@@ -4,7 +4,8 @@ public class Idle: State {
     private bool fixedExecuted;
     public Idle(PlayerController controller) : base("Idle") {
         this.controller = controller;
-        fixedExecuted = false;
+        //fixedExecuted = false;    // para fazer funcionar a alteração do movement no idle, descomentar essa linha e comentar a debaixo
+        fixedExecuted = true;
     }
 
     public override void Enter() {
@@ -17,8 +18,9 @@ public class Idle: State {
         base.Update();
         if(!controller.movementVector.IsZero()){
             controller.stateMachine.ChangeState(controller.walkingState);
-            controller.thisRigidbody.constraints = controller.originalConstraints;
-            fixedExecuted = false;
+            //fixedExecuted = false;
+            //controller.thisRigidbody.constraints = controller.originalConstraints;
+            fixedExecuted = true;
             return;
         }
     }
