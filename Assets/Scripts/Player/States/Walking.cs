@@ -6,11 +6,9 @@ public class Walking : State {
     }
     public override void Enter() {
         base.Enter();
-        Debug.Log("Walk enter.");
     }
     public override void Exit() {
         base.Exit();
-        Debug.Log("Walk exit.");
     }
     public override void Update() {
         base.Update();
@@ -18,14 +16,16 @@ public class Walking : State {
             controller.stateMachine.ChangeState(controller.idleState);
             return;
         }
-
-        Vector3 walkVector = controller.movementVector * Time.deltaTime * controller.speed;
-        controller.transform.Translate(walkVector);
     }
     public override void LateUpdate() {
         base.LateUpdate();
     }
     public override void FixedUpdate() {
         base.FixedUpdate();
+
+        Vector3 walkVector = controller.movementVector * controller.speed;
+        walkVector = controller.GetFoward() * walkVector;
+        
+        controller.thisRigidbody.AddForce(walkVector, ForceMode.Force);
     }
 }

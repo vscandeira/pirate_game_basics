@@ -9,7 +9,12 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public Idle idleState;
     [HideInInspector] public Walking walkingState;
     [HideInInspector] public Vector3 movementVector;
+    [HideInInspector] public Rigidbody thisRigidbody;
     public float speed = 10f;
+
+    void Awake() {
+        thisRigidbody = GetComponent<Rigidbody>();
+    }
     void Start() {
         stateMachine = new StateMachine();
         idleState = new Idle(this);
@@ -29,5 +34,21 @@ public class PlayerController : MonoBehaviour
         movementVector = new Vector3(inputX, 0, inputZ);
 
         stateMachine.Update();
+    }
+    void FixedUpdate() {
+        stateMachine.FixedUpdate();
+    }
+    void LateUpdate() {
+        stateMachine.LateUpdate();
+    }
+
+    public Quaternion GetFoward() {
+        Camera camera = Camera.main;
+        float eulerY = camera.transform.eulerAngles.y;
+        return Quaternion.Euler(0,eulerY,0);
+    }
+
+    void OnGUI() {
+        GUI.Label(new Rect(5,5,400,100), stateMachine.currentStateName);
     }
 }
