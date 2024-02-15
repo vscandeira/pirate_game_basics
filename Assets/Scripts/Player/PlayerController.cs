@@ -48,6 +48,15 @@ public class PlayerController : MonoBehaviour
         return Quaternion.Euler(0,eulerY,0);
     }
 
+    public void RotateBodyToFaceInput() {
+        Camera camera = Camera.main;
+        Quaternion q1 = Quaternion.LookRotation(movementVector, Vector3.up);
+        Quaternion q2 = Quaternion.Euler(0,camera.transform.eulerAngles.y,0);
+        Quaternion newRotation = Quaternion.LerpUnclamped(transform.rotation, q1*q2, 0.5f);
+        
+        thisRigidbody.MoveRotation(newRotation);
+    }
+
     void OnGUI() {
         GUI.Label(new Rect(5,5,400,100), stateMachine.currentStateName);
     }

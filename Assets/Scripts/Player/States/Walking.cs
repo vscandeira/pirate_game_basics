@@ -27,5 +27,7 @@ public class Walking : State {
         walkVector = controller.GetFoward() * walkVector;
         
         controller.thisRigidbody.AddForce(walkVector, ForceMode.Force);
+
+        controller.RotateBodyToFaceInput();
     }
 }
