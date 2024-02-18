@@ -10,12 +10,12 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public Walking walkingState;
     [HideInInspector] public Vector3 movementVector;
     [HideInInspector] public Rigidbody thisRigidbody;
-    [HideInInspector] public RigidbodyConstraints originalConstraints;
+    [HideInInspector] public Animator thisAnimator;
     public float speed = 10f;
 
     void Awake() {
         thisRigidbody = GetComponent<Rigidbody>();
-        originalConstraints = thisRigidbody.constraints;
+        thisAnimator = GetComponent<Animator>();
     }
     void Start() {
         stateMachine = new StateMachine();
@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour
         bool isRight = Input.GetKey(KeyCode.D) | Input.GetKey(KeyCode.RightArrow);
         float inputZ = isUp ? 1 : isDown ? -1 : 0;
         float inputX = isRight ? 1 : isLeft ? -1 : 0;
+
+        float velocity = thisRigidbody.velocity.magnitude/speed;
+        thisAnimator.SetFloat("fVelocity",velocity);
 
         movementVector = new Vector3(inputX, 0, inputZ);
 
