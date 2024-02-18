@@ -24,9 +24,9 @@ public class Walking : State {
         base.FixedUpdate();
 
         Vector3 walkVector = controller.CreateWalk(controller.movementVector);
-        controller.pastMovementVector = controller.movementVector;
         
         controller.thisRigidbody.AddForce(walkVector, ForceMode.Force);
+        //controller.thisRigidbody.MovePosition(walkVector+controller.transform.position);
 
         controller.RotateBodyToFaceInput();
     }

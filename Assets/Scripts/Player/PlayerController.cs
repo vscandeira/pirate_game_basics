@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public Idle idleState;
     [HideInInspector] public Walking walkingState;
     [HideInInspector] public Vector3 movementVector;
-    [HideInInspector] public Vector3 pastMovementVector;
     [HideInInspector] public Rigidbody thisRigidbody;
     [HideInInspector] public RigidbodyConstraints originalConstraints;
     public float speed = 10f;
@@ -17,7 +16,6 @@ public class PlayerController : MonoBehaviour
     void Awake() {
         thisRigidbody = GetComponent<Rigidbody>();
         originalConstraints = thisRigidbody.constraints;
-        pastMovementVector = new Vector3(0,0,0);
     }
     void Start() {
         stateMachine = new StateMachine();

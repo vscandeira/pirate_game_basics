@@ -1457,8 +1457,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: 0, z: 0}
+  pastMovementVector: {x: 0, y: 0, z: 0}
   thisRigidbody: {fileID: 0}
-  speed: 20
+  originalConstraints: 0
+  speed: 1
 --- !u!136 &1565095346
 CapsuleCollider:
   m_ObjectHideFlags: 0

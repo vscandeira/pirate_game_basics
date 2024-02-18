@@ -1,11 +1,8 @@
 using UnityEngine;
 public class Idle: State {
     private PlayerController controller;
-    private bool fixedExecuted;
     public Idle(PlayerController controller) : base("Idle") {
         this.controller = controller;
-        //fixedExecuted = false;    // para fazer funcionar a alteração do movement no idle, descomentar essa linha e comentar a debaixo
-        fixedExecuted = true;
     }
 
     public override void Enter() {
@@ -18,9 +15,6 @@ public class Idle: State {
         base.Update();
         if(!controller.movementVector.IsZero()){
             controller.stateMachine.ChangeState(controller.walkingState);
-            //fixedExecuted = false;
-            //controller.thisRigidbody.constraints = controller.originalConstraints;
-            fixedExecuted = true;
             return;
         }
     }
@@ -29,11 +23,5 @@ public class Idle: State {
     }
     public override void FixedUpdate() {
         base.FixedUpdate();
-        if(!fixedExecuted){
-            //Vector3 walkVector = controller.CreateWalk(-controller.pastMovementVector/5);
-            //controller.thisRigidbody.AddForce(walkVector, ForceMode.VelocityChange);
-            controller.thisRigidbody.constraints = RigidbodyConstraints.FreezePosition;
-            fixedExecuted = true;
-        }
     }
 }
