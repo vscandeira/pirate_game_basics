@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour
+public class Rotate : MonoBehaviour
 {
     public float DegreesPerSecond = 10f;
     void Update()
