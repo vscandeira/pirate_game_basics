@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7540826596408277817}
   - component: {fileID: 8781047987158677543}
   - component: {fileID: 7262717284283456559}
-  - component: {fileID: 5490836431420087817}
   m_Layer: 0
   m_Name: WarSailingShip2SmallDetails
   m_TagString: Untagged
@@ -87,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5490836431420087817
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007655176898003936}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6977256821715182777, guid: 676e6d0324a058849b4ddbf5d3b04575, type: 3}
 --- !u!1 &3637492248430083910
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +97,6 @@ GameObject:
   - component: {fileID: 2309251220713391993}
   - component: {fileID: 8921860762027417279}
   - component: {fileID: 3772729232322329016}
-  - component: {fileID: 5309391907163653552}
   m_Layer: 0
   m_Name: WarSailingShip2Sails
   m_TagString: Untagged
@@ -186,20 +170,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5309391907163653552
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3637492248430083910}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3262761738763497360, guid: 676e6d0324a058849b4ddbf5d3b04575, type: 3}
 --- !u!1 &3860833303169104552
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +384,6 @@ GameObject:
   - component: {fileID: 2774745608718487301}
   - component: {fileID: 6481949161010918017}
   - component: {fileID: 5233134823915641063}
-  - component: {fileID: 3564062801525092474}
   m_Layer: 0
   m_Name: WarSailingShip2Hull
   m_TagString: Untagged
@@ -490,20 +459,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3564062801525092474
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5794484973702178780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2041898243415564896, guid: 676e6d0324a058849b4ddbf5d3b04575, type: 3}
 --- !u!1 &6603379089271582765
 GameObject:
   m_ObjectHideFlags: 0

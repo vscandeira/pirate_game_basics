@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4553977851580176126}
-  - component: {fileID: 1117805359904846350}
   m_Layer: 0
   m_Name: GenPoint
   m_TagString: Untagged
@@ -32,19 +31,6 @@ Transform:
   m_Father: {fileID: 9156133495413175556}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1117805359904846350
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531051984135710346}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9156133495413175559
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,11 +79,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombPrefabs:
   - {fileID: 5154497726112019970, guid: af46030164d74ed4889c8b1cfff8240f, type: 3}
-  timeInterval: {x: 1, y: 1}
+  timeInterval: {x: 1, y: 3}
   spawnPoint: {fileID: 531051984135710346}
   target: {fileID: 0}
-  rangeInDegrees: 0
-  force: {x: 0, y: 0}
+  rangeInDegrees: 10
+  force: {x: 13, y: 18}
+  HeightForce: 180
 --- !u!1001 &9156133495632045384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,7 +140,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6400000, guid: 511599a8f906249d184bd735555babb1, type: 3}
+    - {fileID: 6400006, guid: 511599a8f906249d184bd735555babb1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 511599a8f906249d184bd735555babb1, type: 3}
 --- !u!4 &9156133495631921096 stripped
 Transform:
