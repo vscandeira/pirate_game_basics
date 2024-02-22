@@ -215,9 +215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee4f79344126064da232b12dca39f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExplosionDelay: 5
+  ExplosionDelay: 3
   Exp:
   - {fileID: 6266140703126759150, guid: 708719a7cc4e1d3499734ab8581984a5, type: 3}
+  BlastRadius: 1.5
 --- !u!54 &2133178403
 Rigidbody:
   m_ObjectHideFlags: 0

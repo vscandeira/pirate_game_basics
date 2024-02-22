@@ -7,6 +7,7 @@ public class Bomb : MonoBehaviour
 {
     public float ExplosionDelay = 5f;
     public List<GameObject> Exp;
+    public float BlastRadius = 2.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +25,24 @@ public class Bomb : MonoBehaviour
     }
 
     private void Explosion(){
-        // Destroy plataforms
-        // SFX
-        // Verify player
+        // Destroy bomb
+        Destroy(gameObject);
+
+        // Create explosion
         Vector3 pos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
         Quaternion q = new Quaternion(0,0,0,0);
         Instantiate(Exp[0], pos, q);
-        // Destroy Objects
-        Destroy(gameObject);
+
+        // Destroy plataforms
+        Collider[] colliders = Physics.OverlapSphere(transform.position, BlastRadius);
+        foreach(Collider collider in colliders) {
+            GameObject hitObject = collider.gameObject;
+            if (hitObject.CompareTag("Plataform")) {
+                Destroy(hitObject);
+            }
+        }
+        // SFX
+        // Verify player
+
     }
 }
