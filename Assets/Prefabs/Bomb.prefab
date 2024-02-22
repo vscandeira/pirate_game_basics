@@ -218,7 +218,8 @@ MonoBehaviour:
   ExplosionDelay: 3
   Exp:
   - {fileID: 6266140703126759150, guid: 708719a7cc4e1d3499734ab8581984a5, type: 3}
-  BlastRadius: 1.5
+  BlastRadius: 3
+  BlastDamage: 6
 --- !u!54 &2133178403
 Rigidbody:
   m_ObjectHideFlags: 0
