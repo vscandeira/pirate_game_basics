@@ -7,6 +7,7 @@ public class Bomb : MonoBehaviour
 {
     public float ExplosionDelay = 3f;
     public List<GameObject> Exp;
+    public GameObject WoodBreakingPrefab;
     public float BlastRadius = 3f;
     public float BlastDamage=6f;
     
@@ -46,6 +47,7 @@ public class Bomb : MonoBehaviour
                     int damage = (int) Mathf.Ceil(damageRate * BlastDamage);
                     life.health -= damage;
                     if(life.health <= 0) {
+                        Instantiate(WoodBreakingPrefab, hitObject.transform.position, WoodBreakingPrefab.transform.rotation);
                         Destroy(hitObject);
                     }
                 }
