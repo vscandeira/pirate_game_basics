@@ -12,6 +12,8 @@ Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplasti
   * Partículas: [Particle Pack](https://opengameart.org/content/particle-pack-80-sprites)
   * Canhoes: [Stylish Cannon Pack](https://assetstore.unity.com/packages/3d/props/weapons/stylish-cannon-pack-174145)
   * Madeira para o piso: [Wooden Pallet Pack](https://assetstore.unity.com/packages/3d/props/industrial/wooden-pallet-pack-657)
+  * Músicas por Kevin MacLeod: [incompetech.com](https://www.incompetech.com)
+  * Efeitos sonoros com licença pública obtidos em [freesound.org](https://freesound.org)
 * Bomba, incluindo:
   * Animação do pavio.
   * Animação de explosão.
@@ -21,9 +23,9 @@ Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplasti
   * Implementação de animações correspondentes.
 * Rotação do navio.
 * Canhão e disparo das bombas.
+* Efeitos sonoros e música.
 
 ### O que será feito
-* Sonoplastia
 * Dano e game over
 * UI
 * Superar problema do deslizar pela superfície
