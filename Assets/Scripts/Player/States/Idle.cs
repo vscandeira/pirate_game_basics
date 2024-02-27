@@ -13,6 +13,10 @@ public class Idle: State {
     }
     public override void Update() {
         base.Update();
+        if(controller.hasJumpInput) {
+            controller.stateMachine.ChangeState(controller.jumpState);
+            return;
+        }
         if(!controller.movementVector.IsZero()){
             controller.stateMachine.ChangeState(controller.walkingState);
             return;

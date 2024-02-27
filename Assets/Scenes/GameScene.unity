@@ -1656,6 +1656,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
+    - target: {fileID: 2554612807327474184, guid: 88d21cc16c54fd34296e056334fd387c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 2554612807327474185, guid: 88d21cc16c54fd34296e056334fd387c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1789,6 +1794,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1606575220}
     m_Modifications:
+    - target: {fileID: 3001390704365698874, guid: 121cd5239166f74428af878549fba505,
+        type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001390704365698874, guid: 121cd5239166f74428af878549fba505,
+        type: 3}
+      propertyPath: jumpPower
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6000030061849849098, guid: 121cd5239166f74428af878549fba505,
         type: 3}
       propertyPath: m_RootOrder
