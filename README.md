@@ -26,7 +26,7 @@ Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplasti
 * Efeitos sonoros e música.
 
 ### O que será feito
-* Concluir jump
+* Melhorar animação do jump
 * Score e game over
 * UI
 * Efeito da água

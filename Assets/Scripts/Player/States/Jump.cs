@@ -12,9 +12,11 @@ public class Jump: State {
         base.Enter();
         hasJumped = false;
         cooldown = initialCooldown;
+        controller.thisAnimator.SetBool("bJumping", true);
     }
     public override void Exit() {
         base.Exit();
+        controller.thisAnimator.SetBool("bJumping", false);
     }
     public override void Update() {
         base.Update();
