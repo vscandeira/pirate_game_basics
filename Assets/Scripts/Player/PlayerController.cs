@@ -8,11 +8,12 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public StateMachine stateMachine;
     [HideInInspector] public Idle idleState;
     [HideInInspector] public Walking walkingState;
+    [HideInInspector] public Jump jumpState;
+    [HideInInspector] public Dead deadState;
     [HideInInspector] public Collider thisCollider;
     [HideInInspector] public Vector3 movementVector;
     [HideInInspector] public Rigidbody thisRigidbody;
     [HideInInspector] public Animator thisAnimator;
-    [HideInInspector] public Jump jumpState;
     [HideInInspector] public bool hasJumpInput;
     [HideInInspector] public bool isGrounded;
     public float speed = 10f;
@@ -29,11 +30,19 @@ public class PlayerController : MonoBehaviour
         idleState = new Idle(this);
         walkingState = new Walking(this);
         jumpState = new Jump(this);
+        deadState = new Dead(this);
         stateMachine.ChangeState(idleState);
     }
 
     // Update is called once per frame
     void Update() {
+        if(GameManager.Instance.isGameOver){
+            if(stateMachine.currentStateName != deadState.name){
+                stateMachine.ChangeState(deadState);
+            }
+            return;
+        }
+
         bool isUp = Input.GetKey(KeyCode.W) | Input.GetKey(KeyCode.UpArrow);
         bool isDown = Input.GetKey(KeyCode.S) | Input.GetKey(KeyCode.DownArrow);
         bool isLeft = Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.LeftArrow);

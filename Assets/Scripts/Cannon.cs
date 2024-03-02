@@ -18,6 +18,7 @@ public class Cannon : MonoBehaviour
     }
 
     void Update(){
+        if(GameManager.Instance.isGameOver) return;
         coolDown -= Time.deltaTime;
         if(coolDown<=0){
             coolDown = Random.Range(timeInterval.x, timeInterval.y);

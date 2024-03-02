@@ -14,20 +14,21 @@ Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplasti
   * Madeira para o piso: [Wooden Pallet Pack](https://assetstore.unity.com/packages/3d/props/industrial/wooden-pallet-pack-657)
   * Músicas por Kevin MacLeod: [incompetech.com](https://www.incompetech.com)
   * Efeitos sonoros com licença pública obtidos em [freesound.org](https://freesound.org)
+  * Efeito de game over obtido de [soundmonster0](https://freesound.org/people/soundmonster0/sounds/533925/)
 * Bomba, incluindo:
   * Animação do pavio.
   * Animação de explosão.
   * Destruição de plataformas.
 * Movimentação de personagem incluindo:
-  * Máquina de estados via código com o estados: Idle e Walking.
+  * Máquina de estados via código com o estados: Idle, Walking, Jump e Dead.
   * Implementação de animações correspondentes.
 * Rotação do navio.
 * Canhão e disparo das bombas.
 * Efeitos sonoros e música.
+* Game Over.
 
 ### O que será feito
-* Melhorar animação do jump
-* Score e game over
+* Score
 * UI
 * Efeito da água
 * Câmera controlável pelo wasd
