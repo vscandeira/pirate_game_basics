@@ -26,9 +26,9 @@ Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplasti
 * Canhão e disparo das bombas.
 * Efeitos sonoros e música.
 * Game Over.
+* Score.
 
 ### O que será feito
-* Score
 * UI
 * Efeito da água
 * Câmera controlável pelo wasd
