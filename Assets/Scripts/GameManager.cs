@@ -33,11 +33,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int GetScore(){
+    public int GetScore(){
         return (int) Mathf.Floor(score);
     }
 
-    private int GetHighestScore() {
+    public int GetHighestScore() {
         return highestScore;
     }
 

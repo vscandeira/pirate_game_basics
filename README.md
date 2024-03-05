@@ -1,5 +1,5 @@
 # pirate_game_basics
-![Ponto atual](Prints/Printa04_2024-02-21_214958.png)
+![Ponto atual](Prints/Print05_2024-03-05_173526.png)
 
 Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplastia, animação de personagens
 
@@ -27,13 +27,14 @@ Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplasti
 * Efeitos sonoros e música.
 * Game Over.
 * Score.
+* UI
 
 ### O que será feito
-* UI
 * Efeito da água
-* Câmera controlável pelo wasd
-* Interface para controle
 * Superar problema do deslizar pela superfície
+* Câmera controlável pelo wasd
+* UI mais agradável
+* Interface para controle
 * Menu Inicial
 * Executável para Windows
 
