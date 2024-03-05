@@ -89,10 +89,6 @@ public class PlayerController : MonoBehaviour
         thisRigidbody.MoveRotation(newRotation);
     }
 
-    void OnGUI() {
-        GUI.Label(new Rect(5,5,400,100), stateMachine.currentStateName);
-    }
-
     public void DetectGround() {
         // reset flag
         isGrounded = false;

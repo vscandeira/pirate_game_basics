@@ -1,5 +1,5 @@
 # pirate_game_basics
-![Ponto atual](Prints/Print05_2024-03-05_173526.png)
+![Ponto atual](Prints/Print06_2024-03-05_174308.png)
 
 Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplastia, animação de personagens
 
