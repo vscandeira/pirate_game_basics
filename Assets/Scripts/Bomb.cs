@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
@@ -11,13 +11,8 @@ public class Bomb : MonoBehaviour
     public float BlastRadius = 3f;
     public float BlastDamage=6f;
     
-    void Start()
-    {
+    void Start() {
         StartCoroutine(ExpDelay(ExplosionDelay));   
-    }
-
-    void Update()
-    {
     }
 
     private IEnumerator ExpDelay(float delay){
@@ -53,8 +48,6 @@ public class Bomb : MonoBehaviour
                 }
             }
         }
-        // SFX
-        // Verify player
 
     }
 }

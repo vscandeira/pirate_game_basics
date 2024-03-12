@@ -3,7 +3,7 @@
 
 Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplastia, animação de personagens
 
-*Projeto não publicado ainda*
+Link de publicação WebGL: https://play.unity.com/mg/other/webgl-builds-395663
 
 ### O que já foi feito
 * Utilização dos assets da asset store para:
