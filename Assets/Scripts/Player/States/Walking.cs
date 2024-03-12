@@ -12,6 +12,10 @@ public class Walking : State {
     }
     public override void Update() {
         base.Update();
+        if(controller.hasJumpInput) {
+            controller.stateMachine.ChangeState(controller.jumpState);
+            return;
+        }
         if(controller.movementVector.IsZero()){
             controller.stateMachine.ChangeState(controller.idleState);
             return;
@@ -22,12 +26,8 @@ public class Walking : State {
     }
     public override void FixedUpdate() {
         base.FixedUpdate();
-
         Vector3 walkVector = controller.CreateWalk(controller.movementVector);
-        
         controller.thisRigidbody.AddForce(walkVector, ForceMode.Force);
-        //controller.thisRigidbody.MovePosition(walkVector+controller.transform.position);
-
         controller.RotateBodyToFaceInput();
     }
 }

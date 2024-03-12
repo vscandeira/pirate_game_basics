@@ -1,22 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    public float ExplosionDelay = 5f;
+    public float ExplosionDelay = 3f;
     public List<GameObject> Exp;
-    public float BlastRadius = 2.5f;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public GameObject WoodBreakingPrefab;
+    public float BlastRadius = 3f;
+    public float BlastDamage=6f;
+    
+    void Start() {
         StartCoroutine(ExpDelay(ExplosionDelay));   
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     private IEnumerator ExpDelay(float delay){
@@ -38,11 +34,20 @@ public class Bomb : MonoBehaviour
         foreach(Collider collider in colliders) {
             GameObject hitObject = collider.gameObject;
             if (hitObject.CompareTag("Plataform")) {
-                Destroy(hitObject);
+                Life life = hitObject.GetComponent<Life>();
+                if(life != null) {
+                    float distance = (hitObject.transform.position - transform.position).magnitude;
+                    float distanceRate = Mathf.Clamp(distance/BlastRadius, 0, 1);
+                    float damageRate = 1f - Mathf.Pow(distanceRate, 4);
+                    int damage = (int) Mathf.Ceil(damageRate * BlastDamage);
+                    life.health -= damage;
+                    if(life.health <= 0) {
+                        Instantiate(WoodBreakingPrefab, hitObject.transform.position, WoodBreakingPrefab.transform.rotation);
+                        Destroy(hitObject);
+                    }
+                }
             }
         }
-        // SFX
-        // Verify player
 
     }
 }
