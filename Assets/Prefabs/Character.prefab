@@ -1856,9 +1856,11 @@ GameObject:
   - component: {fileID: 3001390704365698872}
   - component: {fileID: 3001390704365698873}
   - component: {fileID: 3001390704365698874}
+  - component: {fileID: 8855052670802634626}
+  - component: {fileID: 6490025605881977650}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1946,10 +1948,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb11046c57b98145b44ef34864e902f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisCollider: {fileID: 0}
   movementVector: {x: 0, y: 0, z: 0}
   thisRigidbody: {fileID: 0}
   thisAnimator: {fileID: 0}
-  speed: 10
+  hasJumpInput: 0
+  isGrounded: 0
+  speed: 15
+  jumpPower: 8
+  jumpMovementFactor: 0.5
+--- !u!114 &8855052670802634626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345487357064116144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7283b646b5716844abb32ffa0013f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 0
+--- !u!114 &6490025605881977650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345487357064116144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cc17b8912bd5d43b3bcea55ec9df29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  underWaterDrag: 3
+  underWaterAngularDrag: 1
+  airDrag: 0
+  airAngularDrag: 0.05
+  buoyancyForce: 40
 --- !u!1 &6360988342429175673
 GameObject:
   m_ObjectHideFlags: 0
