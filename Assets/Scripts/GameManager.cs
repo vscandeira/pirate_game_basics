@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -51,5 +52,14 @@ public class GameManager : MonoBehaviour
         if(prevHigh < GetHighestScore()) {
             PlayerPrefs.SetInt(NAME_HIGHEST_SCORE, GetHighestScore());
         }
+
+        StartCoroutine(ReloadScene(7));
+    }
+
+    private IEnumerator ReloadScene(float delay){
+        yield return new WaitForSeconds(delay);
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
     }
 }

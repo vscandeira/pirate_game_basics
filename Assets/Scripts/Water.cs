@@ -7,7 +7,7 @@ public class Water : MonoBehaviour
     void Update() {
     }
 
-    void OnCollisionEnter(Collision other) {
+    void OnTriggerEnter(Collider other) {
         GameObject hitObject = other.gameObject;
         if(hitObject.CompareTag("Player")){
             GameManager.Instance.EndGame();

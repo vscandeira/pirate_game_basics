@@ -27,16 +27,16 @@ Unidade de introdução a técnicas artísticas da DIO incluindo: UI, sonoplasti
 * Efeitos sonoros e música.
 * Game Over.
 * Score.
-* UI
+* UI básica.
+* Efeito da água.
 
 ### O que será feito
-* Efeito da água
-* Superar problema do deslizar pela superfície
-* Câmera controlável pelo wasd
-* UI mais agradável
-* Interface para controle
-* Menu Inicial
-* Executável para Windows
+* Superar problema do deslizar pela superfície.
+* Câmera controlável pelo wasd.
+* UI mais agradável (tela de game over com scores, cliques para jogar novamente).
+* Interface para controle.
+* Menu Inicial.
+* Executável para Windows.
 
 ### Backlog futuro
 * N/D

@@ -417,7 +417,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274222183}
-  m_LocalRotation: {x: 0.2893178, y: -0.45922217, z: 0.16118543, w: 0.82427514}
+  m_LocalRotation: {x: 0.28931776, y: -0.45922214, z: 0.16118538, w: 0.8242752}
   m_LocalPosition: {x: -54.985382, y: -112.623, z: 96.64848}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -542,7 +542,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.2893178, y: -0.45922217, z: 0.16118543, w: 0.82427514}
+  m_LocalRotation: {x: 0.28931776, y: -0.45922214, z: 0.16118538, w: 0.8242752}
   m_LocalPosition: {x: -54.985382, y: -112.623, z: 96.64848}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2733,6 +2733,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2554612807327474186, guid: 88d21cc16c54fd34296e056334fd387c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554612807327474187, guid: 88d21cc16c54fd34296e056334fd387c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88d21cc16c54fd34296e056334fd387c, type: 3}
 --- !u!1001 &2596618095046700593
@@ -2811,16 +2821,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1606575220}
     m_Modifications:
-    - target: {fileID: 3001390704365698874, guid: 121cd5239166f74428af878549fba505,
-        type: 3}
-      propertyPath: speed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3001390704365698874, guid: 121cd5239166f74428af878549fba505,
-        type: 3}
-      propertyPath: jumpPower
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6000030061849849098, guid: 121cd5239166f74428af878549fba505,
         type: 3}
       propertyPath: m_RootOrder
@@ -2881,10 +2881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
-    - target: {fileID: 6345487357064116144, guid: 121cd5239166f74428af878549fba505,
+    - target: {fileID: 6490025605881977650, guid: 121cd5239166f74428af878549fba505,
         type: 3}
-      propertyPath: m_TagString
-      value: Player
+      propertyPath: buoyancyForce
+      value: 140
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 121cd5239166f74428af878549fba505, type: 3}

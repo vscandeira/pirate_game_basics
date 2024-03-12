@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 2133178404}
   - component: {fileID: 2133178403}
   - component: {fileID: -1970467555579512207}
+  - component: {fileID: -6170876592070652702}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee4f79344126064da232b12dca39f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExplosionDelay: 3
+  ExplosionDelay: 5
   Exp:
   - {fileID: 6266140703126759150, guid: 708719a7cc4e1d3499734ab8581984a5, type: 3}
   WoodBreakingPrefab: {fileID: 6266140703126759150, guid: 73c417a8616469941b8e54a3f87a81d2,
@@ -344,6 +345,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-6170876592070652702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5154497726112019970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27cc17b8912bd5d43b3bcea55ec9df29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  underWaterDrag: 3
+  underWaterAngularDrag: 1
+  airDrag: 0
+  airAngularDrag: 0.05
+  buoyancyForce: 130
 --- !u!1 &6776967799093480107
 GameObject:
   m_ObjectHideFlags: 0
